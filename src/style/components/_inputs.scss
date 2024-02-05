@@ -1,0 +1,22 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input,
+textarea {
+  @apply w-full border focus:border-primary border-solid border-dark-shade bg-transparent px-4 py-2 text-sm font-medium text-dark;
+}
+
+input[type="radio"] {
+  @apply mx-1 h-4 w-4 rounded-full border border-solid border-primary p-0 checked:border-2 checked:border-white checked:bg-primary checked:ring-2 checked:ring-primary;
+}
+input[type="checkbox"] {
+  @apply mx-1 h-4 w-4 rounded-none border border-solid border-primary p-0 checked:border-2 checked:border-white checked:bg-primary checked:ring-2 checked:ring-primary;
+}

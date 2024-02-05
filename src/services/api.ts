@@ -1,16 +1,6 @@
-import type { fetcherProps } from '@/types'
 import axios from 'axios'
 
-const axiosInstance = axios.create({ baseURL: 'https://some-domain.com/api' })
-
-export async function fetcher(options: fetcherProps) {
-  const token = localStorage.getItem('auth-token')
-  const response = await axiosInstance({
-    ...options,
-    headers: {
-      ...options.headers,
-      Authorization: token
-    }
-  })
-  return response
-}
+const api = axios.create({
+  baseURL: import.meta.env.VITE_BASE_URL
+})
+export default api

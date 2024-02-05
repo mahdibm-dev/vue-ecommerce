@@ -1,0 +1,22 @@
+.btn {
+  @apply flex w-full shrink items-center justify-center gap-x-3 whitespace-nowrap  text-center;
+}
+
+.btn-primary {
+  @apply btn border-transparent bg-primary p-2 text-white;
+}
+
+.btn-secondary {
+  @apply btn border-transparent bg-gradient-to-r shadow-2xl text-white bg-dark p-2;
+}
+
+button[disabled].btn-primary {
+  @apply cursor-not-allowed bg-stroke;
+}
+
+button.btn-primary:hover {
+  @apply bg-primary/90;
+}
+button.btn-primary:active {
+  @apply bg-primary/70;
+}
